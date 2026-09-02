@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=No, viewport-fit=cover">
+  <meta name="robots" content="Noindex, Nofollow">
   <title>Spotify Rewards – Evaluate & Earn</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231DB954' d='M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,10 +60,10 @@
     .nav-item {
       flex: 1; display: flex; flex-direction: column;
       align-items: center; justify-content: center;
-      gap: 4px; text-decoration: none;
+      gap: 4px; text-decoration: None;
       color: #727272; font-size: 10px; font-weight: 600;
       text-transform: uppercase; letter-spacing: 0.5px;
-      background: none; border: none; cursor: pointer;
+      background: None; border: None; cursor: pointer;
       font-family: inherit; transition: color 0.2s;
       position: relative;
     }
@@ -72,7 +72,7 @@
     .nav-item.active svg { stroke: #1DB954; }
 
     /* ─── PAGES ──────────────────────────────────── */
-    .page { display: none; flex: 1; flex-direction: column; padding-bottom: 80px; }
+    .page { display: None; flex: 1; flex-direction: column; padding-bottom: 80px; }
     .page.active { display: flex; }
 
     /* ─── MAIN (evaluate) ────────────────────────── */
@@ -126,21 +126,21 @@
     @keyframes cover-spin { 0%{transform:rotate(0deg)} 100%{transform:rotate(360deg)} }
 
     .song-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-    .song-name { font-size: 16px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .song-name { font-size: 16px; font-weight: 700; color: #fff; white-space: Nowrap; overflow: hidden; text-overflow: ellipsis; }
     .song-artist-row { display: flex; align-items: center; gap: 6px; }
     .badge-preview { font-size: 9px; font-weight: 700; color: #b3b3b3; border: 1px solid #727272; padding: 1px 4px; border-radius: 2px; text-transform: uppercase; }
-    .song-artist { font-size: 13px; color: #b3b3b3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .song-artist { font-size: 13px; color: #b3b3b3; white-space: Nowrap; overflow: hidden; text-overflow: ellipsis; }
     .save-spotify {
-      display: flex; align-items: center; gap: 6px; background: none; border: none;
+      display: flex; align-items: center; gap: 6px; background: None; border: None;
       color: #fff; font-size: 12px; font-weight: 500; cursor: pointer;
       padding: 4px 0; margin-top: 4px; width: fit-content;
     }
-    .save-spotify svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .save-spotify svg { width: 16px; height: 16px; fill: None; stroke: currentColor; stroke-width: 2; }
     .song-spotify-logo { position: absolute; top: 16px; right: 16px; width: 20px; height: 20px; fill: #1DB954; opacity: 0.9; }
     .song-right-controls { display: flex; align-items: center; gap: 12px; align-self: flex-end; margin-left: auto; }
-    .more-dots { color: #b3b3b3; font-size: 20px; background: none; border: none; cursor: pointer; line-height: 1; padding: 4px; }
+    .more-dots { color: #b3b3b3; font-size: 20px; background: None; border: None; cursor: pointer; line-height: 1; padding: 4px; }
     .play-btn {
-      width: 40px; height: 40px; background: #fff; border: none; border-radius: 50%;
+      width: 40px; height: 40px; background: #fff; border: None; border-radius: 50%;
       display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.2s;
     }
     .play-btn:hover { transform: scale(1.05); }
@@ -148,7 +148,7 @@
 
     /* ─── QUESTIONS ───────────────────────────────── */
     .questions-wrap { width: 100%; display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px; transition: opacity 0.3s; }
-    .questions-wrap.locked { pointer-events: none; opacity: 0.35; }
+    .questions-wrap.locked { pointer-events: None; opacity: 0.35; }
     .question-block { display: flex; flex-direction: column; gap: 8px; }
     .question-title { font-size: 14px; font-weight: 600; color: #fff; }
     .yn-row { display: flex; gap: 10px; }
@@ -161,20 +161,20 @@
 
     /* ─── FINISH BTN ──────────────────────────────── */
     .finish-btn {
-      width: 100%; background: #242424; color: #7f7f7f; border: none;
+      width: 100%; background: #242424; color: #7f7f7f; border: None;
       border-radius: 99px; padding: 16px; font-size: 15px; font-weight: 700;
-      cursor: not-allowed; text-transform: uppercase; letter-spacing: 0.5px;
+      cursor: Not-allowed; text-transform: uppercase; letter-spacing: 0.5px;
       transition: all 0.2s; margin-bottom: 16px; font-family: inherit;
     }
     .finish-btn.active { background: #1DB954; color: #000; cursor: pointer; }
     .finish-btn.active:hover { background: #1ed760; }
     .recaptcha-text { font-size: 9px; color: #535353; text-align: center; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.2px; }
-    .recaptcha-text a { color: #1DB954; text-decoration: none; }
+    .recaptcha-text a { color: #1DB954; text-decoration: None; }
 
     /* ─── SUCCESS CARD ────────────────────────────── */
     .success-card {
       background: #181818; border-radius: 12px; width: 100%;
-      padding: 32px 24px; display: none; flex-direction: column;
+      padding: 32px 24px; display: None; flex-direction: column;
       align-items: center; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,0.5);
     }
     .success-card.show { display: flex; }
@@ -188,7 +188,7 @@
     .received-label { font-size: 10px; font-weight: 700; color: #1DB954; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
     .received-val { font-size: 32px; font-weight: 800; color: #1DB954; letter-spacing: -0.5px; }
     .next-song-btn {
-      width: 100%; background: #1DB954; color: #000; border: none;
+      width: 100%; background: #1DB954; color: #000; border: None;
       border-radius: 99px; padding: 16px; font-size: 15px; font-weight: 700;
       cursor: pointer; text-transform: uppercase; font-family: inherit; transition: background 0.2s;
     }
@@ -196,7 +196,7 @@
 
     /* ─── FINAL SCREEN ────────────────────────────── */
     #finalScreen {
-      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
+      display: None; position: fixed; inset: 0; background: rgba(0,0,0,0.85);
       z-index: 9990; align-items: center; justify-content: center;
       padding: 20px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
     }
@@ -218,17 +218,17 @@
     .final-stat-value { color: #fff; font-weight: 700; }
     .final-stat-value.highlight { color: #1DB954; font-size: 16px; font-weight: 900; }
     .final-cta-btn {
-      width: 100%; background: #1DB954; color: #000; border: none; border-radius: 99px;
+      width: 100%; background: #1DB954; color: #000; border: None; border-radius: 99px;
       padding: 16px; font-size: 16px; font-weight: 800; cursor: pointer;
       font-family: inherit; letter-spacing: 0.3px; transition: background 0.15s, transform 0.1s;
       display: flex; align-items: center; justify-content: center; gap: 8px;
     }
     .final-cta-btn:hover { background: #1ed760; transform: scale(1.02); }
     .final-cta-btn svg { width: 18px; height: 18px; fill: #000; }
-    .final-note { font-size: 11px; color: #535353; margin-top: 14px; }
+    .final-Note { font-size: 11px; color: #535353; margin-top: 14px; }
 
     /* ─── CONFETTI ────────────────────────────────── */
-    .confetti-piece { position: fixed; top: -30px; z-index: 9998; pointer-events: none; opacity: 1; animation: confetti-fall linear forwards; }
+    .confetti-piece { position: fixed; top: -30px; z-index: 9998; pointer-events: None; opacity: 1; animation: confetti-fall linear forwards; }
     @keyframes confetti-fall {
       0%  { transform: translateY(0) rotate(0deg) scaleX(1); opacity: 1; }
       50% { transform: translateY(50vh) rotate(400deg) scaleX(-1); opacity: 1; }
@@ -238,7 +238,7 @@
 
     /* ─── WELCOME POPUP ───────────────────────────── */
     .welcome-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 9999; display: flex; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(4px); }
-    .welcome-backdrop.hidden { display: none; }
+    .welcome-backdrop.hidden { display: None; }
     .welcome-card {
       background: #181818; border-radius: 20px; padding: 36px 28px 28px;
       width: 100%; max-width: 380px; display: flex; flex-direction: column;
@@ -252,9 +252,9 @@
     .welcome-title { font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 10px; line-height: 1.3; }
     .welcome-desc { font-size: 13px; color: #b3b3b3; line-height: 1.6; margin-bottom: 28px; }
     .welcome-desc strong { color: #fff; }
-    .welcome-start-btn { width: 100%; background: #1DB954; color: #000; border: none; border-radius: 99px; padding: 16px; font-size: 16px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.15s, transform 0.1s; }
+    .welcome-start-btn { width: 100%; background: #1DB954; color: #000; border: None; border-radius: 99px; padding: 16px; font-size: 16px; font-weight: 800; cursor: pointer; font-family: inherit; transition: background 0.15s, transform 0.1s; }
     .welcome-start-btn:hover { background: #1ed760; transform: scale(1.02); }
-    .welcome-note { font-size: 11px; color: #535353; margin-top: 14px; }
+    .welcome-Note { font-size: 11px; color: #535353; margin-top: 14px; }
 
     /* ─── WITHDRAW PAGE ───────────────────────────── */
     .page-inner { padding: 28px 16px 0; }
@@ -278,23 +278,23 @@
     .form-input {
       width: 100%; padding: 15px 16px; background: #1a1a1a; border: 1px solid #333;
       border-radius: 8px; color: #fff; font-family: inherit; font-size: 16px; font-weight: 500;
-      outline: none; transition: border-color 0.2s, box-shadow 0.2s;
+      outline: None; transition: border-color 0.2s, box-shadow 0.2s;
     }
     .form-input:focus { border-color: #1DB954; box-shadow: 0 0 0 3px rgba(29,185,84,0.15); }
     .form-input::placeholder { color: #444; font-weight: 400; }
     .form-hint { font-size: 11px; color: #b3b3b3; }
     .withdraw-submit-btn {
-      width: 100%; padding: 16px; background: #003087; color: #fff; border: none;
+      width: 100%; padding: 16px; background: #003087; color: #fff; border: None;
       border-radius: 12px; font-family: inherit; font-size: 16px; font-weight: 800;
       cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
       transition: background 0.2s, transform 0.15s; box-shadow: 0 6px 20px rgba(0,48,135,0.4);
     }
     .withdraw-submit-btn:hover { background: #004ab3; transform: translateY(-2px); }
-    .withdraw-submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-    .security-note { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: #535353; margin-top: 8px; }
+    .withdraw-submit-btn:disabled { opacity: 0.6; cursor: Not-allowed; transform: None; }
+    .security-Note { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; color: #535353; margin-top: 8px; }
 
-    /* ─── iOS PayPal NOTIFICATION ─────────────────── */
-    .ios-notification {
+    /* ─── iOS PayPal NoTIFICATION ─────────────────── */
+    .ios-Notification {
       position: fixed; top: 14px; left: 50%;
       transform: translateX(-50%) translateY(-180px);
       width: calc(100% - 24px); max-width: 375px;
@@ -306,43 +306,43 @@
       z-index: 9999;
       box-shadow: 0 8px 32px rgba(0,0,0,0.35), 0 0 0 0.5px rgba(255,255,255,0.08);
       transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
+      pointer-events: None;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: none;
+      user-select: None;
+      -webkit-user-select: None;
+      touch-action: None;
     }
-    .ios-notification.show {
+    .ios-Notification.show {
       transform: translateX(-50%) translateY(0);
       pointer-events: auto;
       cursor: grab;
     }
-    .ios-notification.dragging {
-      transition: none;
+    .ios-Notification.dragging {
+      transition: None;
       cursor: grabbing;
     }
-    .ios-notif-handle {
+    .ios-Notif-handle {
       position: absolute; bottom: 5px; left: 50%;
       transform: translateX(-50%); width: 36px; height: 5px;
       background: rgba(255, 255, 255, 0.25); border-radius: 10px;
     }
-    .ios-notif-icon-container {
+    .ios-Notif-icon-container {
       flex-shrink: 0; width: 38px; height: 38px;
       border-radius: 9px; background: #ffffff;
       display: flex; align-items: center; justify-content: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
-    .ios-notif-icon-container img {
+    .ios-Notif-icon-container img {
       width: 22px;
       height: auto;
       display: block;
     }
-    .ios-notif-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
-    .ios-notif-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
-    .ios-notif-app { font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.5); letter-spacing: -0.1px; }
-    .ios-notif-time { font-size: 11px; color: rgba(255, 255, 255, 0.4); }
-    .ios-notif-title { font-size: 14px; font-weight: 600; color: #ffffff; letter-spacing: -0.15px; }
-    .ios-notif-msg { font-size: 13px; color: rgba(255, 255, 255, 0.85); line-height: 1.35; letter-spacing: -0.1px; }
+    .ios-Notif-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+    .ios-Notif-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2px; }
+    .ios-Notif-app { font-size: 12px; font-weight: 500; color: rgba(255, 255, 255, 0.5); letter-spacing: -0.1px; }
+    .ios-Notif-time { font-size: 11px; color: rgba(255, 255, 255, 0.4); }
+    .ios-Notif-title { font-size: 14px; font-weight: 600; color: #ffffff; letter-spacing: -0.15px; }
+    .ios-Notif-msg { font-size: 13px; color: rgba(255, 255, 255, 0.85); line-height: 1.35; letter-spacing: -0.1px; }
 
     /* ─── SUPPORT PAGE ────────────────────────────── */
     .suporte-hero { text-align: center; margin-bottom: 28px; }
@@ -352,7 +352,7 @@
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
       margin: 0 auto 16px; box-shadow: 0 8px 24px rgba(29,185,84,0.3);
     }
-    .suporte-hero-icon svg { width: 32px; height: 32px; fill: none; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .suporte-hero-icon svg { width: 32px; height: 32px; fill: None; stroke: #000; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .suporte-title { font-size: 26px; font-weight: 700; color: #fff; margin: 0 0 8px; }
     .suporte-subtitle { font-size: 14px; color: #b3b3b3; margin: 0; line-height: 1.5; }
 
@@ -370,27 +370,27 @@
     .suporte-form-group select,
     .suporte-form-group textarea {
       width: 100%; padding: 12px 14px; border: 1.5px solid #333; border-radius: 10px;
-      font-size: 14px; color: #fff; background: #1a1a1a; outline: none;
+      font-size: 14px; color: #fff; background: #1a1a1a; outline: None;
       transition: border-color 0.2s, box-shadow 0.2s; font-family: inherit;
-      appearance: none; -webkit-appearance: none;
+      appearance: None; -webkit-appearance: None;
     }
-    .suporte-form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23b3b3b3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
+    .suporte-form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='None' stroke='%23b3b3b3' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: No-repeat; background-position: right 14px center; padding-right: 36px; }
     .suporte-form-group select option { background: #282828; color: #fff; }
     .suporte-form-group input::placeholder, .suporte-form-group textarea::placeholder { color: #555; }
     .suporte-form-group input:focus, .suporte-form-group select:focus, .suporte-form-group textarea:focus { border-color: #1DB954; background: #222; box-shadow: 0 0 0 3px rgba(29,185,84,0.12); }
-    .suporte-form-group textarea { resize: none; height: 110px; line-height: 1.5; }
+    .suporte-form-group textarea { resize: None; height: 110px; line-height: 1.5; }
 
     .suporte-submit-btn {
-      width: 100%; padding: 15px; background: #1DB954; color: #000; border: none;
+      width: 100%; padding: 15px; background: #1DB954; color: #000; border: None;
       border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer;
       display: flex; align-items: center; justify-content: center; gap: 8px;
       transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
       box-shadow: 0 4px 16px rgba(29,185,84,0.3); margin-top: 4px; font-family: inherit;
     }
     .suporte-submit-btn:hover { background: #1ed760; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(29,185,84,0.4); }
-    .suporte-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+    .suporte-submit-btn:disabled { opacity: 0.7; cursor: Not-allowed; transform: None; }
 
-    .suporte-success { display: none; text-align: center; padding: 32px 20px; background: #282828; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); border: 1px solid #333; margin-bottom: 20px; }
+    .suporte-success { display: None; text-align: center; padding: 32px 20px; background: #282828; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); border: 1px solid #333; margin-bottom: 20px; }
     .suporte-success.show { display: block; animation: fadeInUp 0.4s ease; }
     @keyframes fadeInUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
     .suporte-success-icon { font-size: 52px; margin-bottom: 12px; }
@@ -449,7 +449,7 @@
       <h1 class="welcome-title">You've been selected to evaluate music on Spotify!</h1>
       <p class="welcome-desc">Listen to songs and rate them. Unlimited evaluations available — each evaluation is <strong>paid directly</strong> to your account!</p>
       <button class="welcome-start-btn" id="welcomeStartBtn">Start Evaluating →</button>
-      <p class="welcome-note">🔒 Secure and verified program</p>
+      <p class="welcome-Note">🔒 Secure and verified program</p>
     </div>
   </div>
 
@@ -495,12 +495,12 @@
           <div class="song-info">
             <div class="song-name" id="songName">Loading...</div>
             <div class="song-artist-row">
-              <span class="badge-preview">Preview</span>
+              <span class="badge-preview">Previsualizar</span>
               <span class="song-artist" id="songArtist">Artist</span>
             </div>
             <button class="save-spotify">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-              Save on Spotify
+              Guardar en Spotify
             </button>
           </div>
           <div class="song-right-controls">
@@ -515,14 +515,14 @@
           <div class="question-block">
             <p class="question-title" id="q1Title">Do you listen to this artist often?</p>
             <div class="yn-row">
-              <button class="yn-btn" id="q1Yes">Yes</button>
+              <button class="yn-btn" id="q1Sí">Sí</button>
               <button class="yn-btn" id="q1No">No</button>
             </div>
           </div>
           <div class="question-block">
             <p class="question-title" id="q2Title">Do you usually listen to this song?</p>
             <div class="yn-row">
-              <button class="yn-btn" id="q2Yes">Yes</button>
+              <button class="yn-btn" id="q2Sí">Sí</button>
               <button class="yn-btn" id="q2No">No</button>
             </div>
           </div>
@@ -533,7 +533,7 @@
 
         <div class="success-card" id="successCard">
           <div class="success-check">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <svg viewBox="0 0 24 24" fill="None" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <h2 class="success-title">Evaluation Submitted!</h2>
           <div class="received-box">
@@ -577,7 +577,7 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
           Transfer via PayPal
         </button>
-        <p class="security-note">🔒 256-bit SSL encrypted · PayPal protected</p>
+        <p class="security-Note">🔒 256-bit SSL encrypted · PayPal protected</p>
       </form>
     </div>
     <footer class="footer" style="margin-top:auto;padding-top:32px">
@@ -618,7 +618,7 @@
           <select id="spSubject">
             <option value="">Select a subject</option>
             <option>Withdrawal issue</option>
-            <option>Balance not updated</option>
+            <option>Balance Not updated</option>
             <option>Technical problem</option>
             <option>Account question</option>
             <option>Other</option>
@@ -629,7 +629,7 @@
           <textarea id="spMessage" placeholder="Describe your issue..."></textarea>
         </div>
         <button class="suporte-submit-btn" id="spSubmitBtn" onclick="submitSupport()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="None" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           Send Message
         </button>
       </div>
@@ -639,7 +639,7 @@
         <div class="suporte-success-icon">✅</div>
         <h3 class="suporte-success-title">Message Sent!</h3>
         <p class="suporte-success-msg">We received your message and will respond to your email within 24 hours.</p>
-        <button onclick="resetSupportForm()" style="padding:12px 28px;background:#1DB954;color:#000;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Send another</button>
+        <button onclick="resetSupportForm()" style="padding:12px 28px;background:#1DB954;color:#000;border:None;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit">Send aNother</button>
       </div>
 
       <!-- FAQ -->
@@ -648,37 +648,37 @@
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>How do I get paid?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="None" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-answer"><p>Your earnings accumulate with each song evaluation. Once you complete all 10 songs, you can withdraw your balance via PayPal directly from the Cashout tab.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>How long does a withdrawal take?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="None" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-answer"><p>PayPal transfers typically arrive within 1–3 business days after being processed. You will receive an email confirmation once the funds have been sent.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>What is the minimum withdrawal amount?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="None" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-answer"><p>The minimum withdrawal amount is $6,000.00 USD. You can request a withdrawal once your balance reaches $6,000.00.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>How many songs can I evaluate per day?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="None" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
           <div class="faq-answer"><p>You can evaluate unlimited songs per day. Each evaluation rewards you with a payment depending on the song's rating.</p></div>
         </div>
         <div class="faq-item">
           <div class="faq-question" onclick="toggleFaq(this)">
             <span>Is this program legitimate?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="faq-chevron" viewBox="0 0 24 24" width="18" height="18" fill="None" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
           </div>
-          <div class="faq-answer"><p>Yes. Spotify Rewards is a verified market research program. Your honest music evaluations help Spotify improve their recommendation algorithms and playlist curation.</p></div>
+          <div class="faq-answer"><p>Sí. Spotify Rewards is a verified market research program. Your honest music evaluations help Spotify improve their recommendation algorithms and playlist curation.</p></div>
         </div>
       </div>
     </div>
@@ -704,45 +704,45 @@
         <svg viewBox="0 0 24 24"><path fill="currentColor" d="M21 7H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm-1 12H4V9h16v10zm-2-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM3 5h16V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v1z"/></svg>
         Withdraw money
       </button>
-      <p class="final-note">🔒 Instant withdrawal unlocked</p>
+      <p class="final-Note">🔒 Instant withdrawal unlocked</p>
     </div>
   </div>
 
-  <!-- iOS PayPal notification -->
-  <div class="ios-notification" id="iosNotif">
-    <div class="ios-notif-icon-container">
+  <!-- iOS PayPal Notification -->
+  <div class="ios-Notification" id="iosNotif">
+    <div class="ios-Notif-icon-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" alt="PayPal">
     </div>
-    <div class="ios-notif-body">
-      <div class="ios-notif-header">
-        <span class="ios-notif-app">PayPal</span>
-        <span class="ios-notif-time">now</span>
+    <div class="ios-Notif-body">
+      <div class="ios-Notif-header">
+        <span class="ios-Notif-app">PayPal</span>
+        <span class="ios-Notif-time">Now</span>
       </div>
-      <div class="ios-notif-title" id="notifTitle">Payment Received</div>
-      <div class="ios-notif-msg" id="notifMsg">You received $0.00 from Spotify Rewards.</div>
+      <div class="ios-Notif-title" id="NotifTitle">Payment Received</div>
+      <div class="ios-Notif-msg" id="NotifMsg">You received $0.00 from Spotify Rewards.</div>
     </div>
-    <div class="ios-notif-handle"></div>
+    <div class="ios-Notif-handle"></div>
   </div>
 
   <audio id="rewardSound" preload="auto">
     <source src="assets/audio/iphone_short_cropped.m4a" type="audio/mpeg">
   </audio>
-  <audio id="notifSound" preload="auto">
+  <audio id="NotifSound" preload="auto">
     <source src="assets/audio/iphone_short_cropped.m4a" type="audio/mp4">
   </audio>
 
   <!-- BOTTOM NAV -->
   <nav class="bottom-nav">
     <button class="nav-item active" id="navEval" onclick="switchTab('eval')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+      <svg viewBox="0 0 24 24" fill="None" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
       Evaluate
     </button>
     <button class="nav-item" id="navWithdraw" onclick="switchTab('withdraw')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+      <svg viewBox="0 0 24 24" fill="None" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="22" height="18" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
       Cashout
     </button>
     <button class="nav-item" id="navSupport" onclick="switchTab('support')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg viewBox="0 0 24 24" fill="None" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       Support
     </button>
   </nav>
@@ -763,13 +763,13 @@
         reward: 6.10
       },
       {
-        name: 'Die With A Smile', artist: 'Lady Gaga & Bruno Mars',
+        name: 'Die With A Smile', artist: 'Lady Gaga & BruNo Mars',
         cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/11/ae/f2/11aef294-f57c-bab9-c9fc-529162984e62/24UMGIM85348.rgb.jpg/600x600bb.jpg',
         src: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/d1/46/e9d14699-9505-493e-cd27-a501095c81ff/mzaf_7283388936457278756.plus.aac.p.m4a',
         reward: 5.80
       },
       {
-        name: 'APT.', artist: 'ROSÉ & Bruno Mars',
+        name: 'APT.', artist: 'ROSÉ & BruNo Mars',
         cover: 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/2d/14/66/2d14661b-345b-d0f3-4e86-56ef626e68aa/075679629203.jpg/600x600bb.jpg',
         src: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/70/41/42/70414259-14f5-245e-bd79-93c80401d556/mzaf_8687698460653166345.plus.aac.p.m4a',
         reward: 6.40
@@ -818,13 +818,13 @@
     var COOLDOWN_KEY = 'sp_app_cooldown_end';
 
     function isInCooldown() {
-      return parseInt(localStorage.getItem(COOLDOWN_KEY) || '0') > Date.now();
+      return parseInt(localStorage.getItem(COOLDOWN_KEY) || '0') > Date.Now();
     }
     function getCooldownRemaining() {
-      return Math.max(0, parseInt(localStorage.getItem(COOLDOWN_KEY) || '0') - Date.now());
+      return Math.max(0, parseInt(localStorage.getItem(COOLDOWN_KEY) || '0') - Date.Now());
     }
     function startCooldown() {
-      localStorage.setItem(COOLDOWN_KEY, Date.now() + COOLDOWN_MS);
+      localStorage.setItem(COOLDOWN_KEY, Date.Now() + COOLDOWN_MS);
     }
 
     // Starting balance from URL (?balance=xxx) or default
@@ -850,9 +850,9 @@
     var songCoverEl       = document.getElementById('songCover');
     var q1Title           = document.getElementById('q1Title');
     var q2Title           = document.getElementById('q2Title');
-    var q1Yes             = document.getElementById('q1Yes');
+    var q1Sí             = document.getElementById('q1Sí');
     var q1No              = document.getElementById('q1No');
-    var q2Yes             = document.getElementById('q2Yes');
+    var q2Sí             = document.getElementById('q2Sí');
     var q2No              = document.getElementById('q2No');
     var finishBtn         = document.getElementById('finishBtn');
     var playBtn           = document.getElementById('playBtn');
@@ -893,7 +893,7 @@
     function unlockQuestions() {
       songUnlocked = true;
       questionsWrap.classList.remove('locked');
-      instructionBanner.innerHTML = '🎉 Song finished! Answer the questions below and tap <strong>FINISH & EARN</strong>';
+      instructionBanner.innerHTML = '🎉 Song finished! Answer the questions below and tap <strong>TERMINAR Y GANAR</strong>';
       checkReady();
     }
 
@@ -919,13 +919,13 @@
       songNameEl.textContent   = song.name;
       songArtistEl.textContent = song.artist;
       songCoverEl.src          = song.cover;
-      q1Title.textContent      = 'Do you listen to ' + song.artist + ' often?';
-      q2Title.textContent      = 'Do you usually listen to ' + song.name + '?';
+      q1Title.textContent      = '¿Escuchas a ' + song.artist + ' seguido?';
+      q2Title.textContent      = '¿Sueles escuchar ' + song.name + '?';
       songCounter.textContent  = 'Song ' + pos;
       updateBalanceUI();
 
       q1Answer = null; q2Answer = null;
-      [q1Yes, q1No, q2Yes, q2No].forEach(function(b) { b.classList.remove('selected'); });
+      [q1Sí, q1No, q2Sí, q2No].forEach(function(b) { b.classList.remove('selected'); });
       finishBtn.disabled = true; finishBtn.classList.remove('active');
       isPlaying = false; songUnlocked = false; setPlayIcon(false);
       if (audioEl) { audioEl.pause(); audioEl.src = ''; audioEl = null; }
@@ -933,7 +933,7 @@
       if (simInterval) { clearInterval(simInterval); simInterval = null; }
 
       instructionBanner.style.display = '';
-      instructionBanner.innerHTML = '🎵 Press play and listen to the song to unlock the evaluation questions.';
+      instructionBanner.innerHTML = '🎵 Presiona play y escucha la canción para desbloquear las preguntas de evaluación.';
       songCard.style.display = '';
       questionsWrap.style.display = '';
       questionsWrap.classList.add('locked');
@@ -962,19 +962,19 @@
     }
 
     function selectOption(btn, ans, type) {
-      var yes = document.getElementById(type+'Yes');
-      var no  = document.getElementById(type+'No');
-      yes.classList.remove('selected'); no.classList.remove('selected');
+      var Sí = document.getElementById(type+'Sí');
+      var No  = document.getElementById(type+'No');
+      Sí.classList.remove('selected'); No.classList.remove('selected');
       btn.classList.add('selected');
       if (type === 'q1') q1Answer = ans; else q2Answer = ans;
       checkReady();
     }
 
     // ── EVENTS ─────────────────────────────────────────────────────────
-    q1Yes.addEventListener('click', function() { selectOption(this,'yes','q1'); });
-    q1No.addEventListener('click',  function() { selectOption(this,'no','q1'); });
-    q2Yes.addEventListener('click', function() { selectOption(this,'yes','q2'); });
-    q2No.addEventListener('click',  function() { selectOption(this,'no','q2'); });
+    q1Sí.addEventListener('click', function() { selectOption(this,'Sí','q1'); });
+    q1No.addEventListener('click',  function() { selectOption(this,'No','q1'); });
+    q2Sí.addEventListener('click', function() { selectOption(this,'Sí','q2'); });
+    q2No.addEventListener('click',  function() { selectOption(this,'No','q2'); });
 
     playBtn.addEventListener('click', function() {
       var song = SONGS[songIndex % SONGS.length];
@@ -1012,11 +1012,11 @@
         startCooldown();
       }
 
-      instructionBanner.style.display = 'none';
-      songCard.style.display          = 'none';
-      questionsWrap.style.display     = 'none';
-      finishBtn.style.display         = 'none';
-      recaptchaText.style.display     = 'none';
+      instructionBanner.style.display = 'None';
+      songCard.style.display          = 'None';
+      questionsWrap.style.display     = 'None';
+      finishBtn.style.display         = 'None';
+      recaptchaText.style.display     = 'None';
 
       rewardAmountEl.textContent = '+$' + fmt(reward);
       successCard.classList.add('show');
@@ -1051,7 +1051,7 @@
           <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;margin-bottom:16px;">You have completed the ${DAILY_LIMIT} evaluations for this session.<br>The next evaluations will be available in:</p>
           <div id="cdTimerApp" style="font-size:2.2rem;font-weight:900;color:#1DB954;letter-spacing:3px;margin-bottom:8px;">${h}:${m}:${s}</div>
           <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;margin-bottom:20px;">Come back in 4 hours to keep earning 💰</p>
-          <button id="closeCdApp" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:none;border-radius:50px;padding:13px 28px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Got it, I'll come back later</button>
+          <button id="closeCdApp" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:None;border-radius:50px;padding:13px 28px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Got it, I'll come back later</button>
         </div>
       `;
       document.body.appendChild(popup);
@@ -1079,7 +1079,7 @@
     }
 
     document.getElementById('finalCashoutBtn').addEventListener('click', function() {
-      document.getElementById('finalScreen').style.display = 'none';
+      document.getElementById('finalScreen').style.display = 'None';
       document.body.style.overflow = '';
       switchTab('withdraw');
     });
@@ -1138,7 +1138,7 @@
           <div style="background:rgba(29,185,84,0.1);border:1px solid rgba(29,185,84,0.3);border-radius:12px;padding:14px;margin-bottom:20px;">
             <p style="color:#1DB954;font-size:0.85rem;margin:0;">&#128226; This measure protects users and ensures payment security. Keep evaluating songs to reach the limit!</p>
           </div>
-          <button id="closeHDBtn" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Got it, keep evaluating</button>
+          <button id="closeHDBtn" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:None;border-radius:50px;padding:14px 32px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Got it, keep evaluating</button>
         </div>
       `;
       document.body.appendChild(popup);
@@ -1167,42 +1167,42 @@
         // Clear input field
         document.getElementById('withdrawAmount').value = '';
         
-        // Trigger notification
+        // Trigger Notification
         showIosNotification(email, amount);
       }, 3500);
     }
 
     var iosNotifTimer = null;
     function showIosNotification(email, amount) {
-      document.getElementById('notifTitle').textContent = "You've got money!";
-      document.getElementById('notifMsg').textContent   = 'Spotify Rewards sent you $' + fmt(amount) + ' USD.';
+      document.getElementById('NotifTitle').textContent = "You've got money!";
+      document.getElementById('NotifMsg').textContent   = 'Spotify Rewards sent you $' + fmt(amount) + ' USD.';
       
-      // Play iOS notification chime
-      var sound = document.getElementById('notifSound');
+      // Play iOS Notification chime
+      var sound = document.getElementById('NotifSound');
       if (sound) {
         sound.currentTime = 0;
         sound.play().catch(function(e) { console.log('Audio error:', e); });
       }
       
-      var notif = document.getElementById('iosNotif');
-      notif.classList.remove('dragging');
-      notif.style.transform = '';
-      notif.classList.add('show');
+      var Notif = document.getElementById('iosNotif');
+      Notif.classList.remove('dragging');
+      Notif.style.transform = '';
+      Notif.classList.add('show');
       
       if (iosNotifTimer) clearTimeout(iosNotifTimer);
       iosNotifTimer = setTimeout(dismissIosNotification, 5500);
     }
 
     function dismissIosNotification() {
-      var notif = document.getElementById('iosNotif');
-      notif.classList.remove('show');
-      notif.classList.remove('dragging');
-      notif.style.transform = '';
+      var Notif = document.getElementById('iosNotif');
+      Notif.classList.remove('show');
+      Notif.classList.remove('dragging');
+      Notif.style.transform = '';
     }
 
-    // iOS draggable notification swipe handling
+    // iOS draggable Notification swipe handling
     (function() {
-      var notif = document.getElementById('iosNotif');
+      var Notif = document.getElementById('iosNotif');
       var startY = 0;
       var currentY = 0;
       var isDragging = false;
@@ -1212,7 +1212,7 @@
         isDragging = true;
         startY = (e.type === 'touchstart') ? e.touches[0].clientY : e.clientY;
         diffY = 0;
-        notif.classList.add('dragging');
+        Notif.classList.add('dragging');
         if (iosNotifTimer) clearTimeout(iosNotifTimer);
       }
 
@@ -1230,14 +1230,14 @@
           translateVal = diffY * 0.25;
         }
         
-        notif.style.transform = 'translateX(-50%) translateY(' + translateVal + 'px)';
+        Notif.style.transform = 'translateX(-50%) translateY(' + translateVal + 'px)';
       }
 
       function dragEnd(e) {
         if (!isDragging) return;
         isDragging = false;
-        notif.classList.remove('dragging');
-        notif.style.transform = '';
+        Notif.classList.remove('dragging');
+        Notif.style.transform = '';
         
         if (diffY < -35) {
           dismissIosNotification();
@@ -1247,12 +1247,12 @@
       }
 
       // Touch events
-      notif.addEventListener('touchstart', dragStart, { passive: true });
-      notif.addEventListener('touchmove', dragMove, { passive: true });
-      notif.addEventListener('touchend', dragEnd);
+      Notif.addEventListener('touchstart', dragStart, { passive: true });
+      Notif.addEventListener('touchmove', dragMove, { passive: true });
+      Notif.addEventListener('touchend', dragEnd);
 
       // Mouse events
-      notif.addEventListener('mousedown', dragStart);
+      Notif.addEventListener('mousedown', dragStart);
       window.addEventListener('mousemove', dragMove);
       window.addEventListener('mouseup', dragEnd);
     })();
@@ -1266,7 +1266,7 @@
       if (!name || !email || !subject || !message) {
         alert('Please fill in all fields.'); return;
       }
-      document.getElementById('supportFormCard').style.display = 'none';
+      document.getElementById('supportFormCard').style.display = 'None';
       document.getElementById('supportSuccess').classList.add('show');
     }
 
