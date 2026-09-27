@@ -1,6 +1,6 @@
 # Deploy My Project
 
-Apenas suba esse app no meu github, faça o deploy dele lá para eu ter um link do Lovable utilizável.
+Upload this app to my GitHub and deploy it so I have a usable Lovable link.
 
 This project was built with [Lovable](https://lovable.dev).
 
