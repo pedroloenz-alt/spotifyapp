@@ -219,7 +219,7 @@
   ];
 
   var ATTRS = ["placeholder", "title", "alt", "aria-label"];
-  var lang = "es";
+  var lang = "en";
 
   function normalize(text) {
     return text.replace(/\s+/g, " ").trim();
@@ -228,6 +228,7 @@
   function translateString(raw) {
     var key = normalize(raw);
     if (!key) return null;
+    if (lang === "en") return null;
     var entry = D[key];
     if (entry && entry[lang]) return entry[lang];
     for (var i = 0; i < PATTERNS.length; i++) {
@@ -288,10 +289,8 @@
   }
 
   function translateDocument() {
-    if (lang === "es") {
-      // Source content is mostly Spanish, but some strings are EN/PT.
-      walk(document.body);
-      applyTitle();
+    if (lang === "en") {
+      document.documentElement.setAttribute("lang", "en");
       return;
     }
     walk(document.body);

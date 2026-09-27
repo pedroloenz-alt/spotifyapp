@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (value && !isNaN(value)) {
             const numValue = parseFloat(value);
             if (numValue > userData.balance) {
-                this.setCustomValidity('Saldo insuficiente');
+                this.setCustomValidity('Insufficient balance');
             } else if (numValue < 6000) {
-                this.setCustomValidity('El monto mínimo es de $6,000.00');
+                this.setCustomValidity('Minimum amount is $6,000.00');
             } else {
                 this.setCustomValidity('');
             }
@@ -67,28 +67,28 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const email = paypalEmail.value.trim();
         const amount = parseFloat(withdrawAmount.value);
-        if (!email || !amount) { showErrorPopup('Por favor, completá todos los campos'); return; }
+        if (!email || !amount) { showErrorPopup('Please fill in all fields'); return; }
         const blocked = amount < 6000 || userData.balance < 6000;
-        if (amount > userData.balance) { showErrorPopup('Saldo insuficiente'); return; }
+        if (amount > userData.balance) { showErrorPopup('Insufficient balance'); return; }
         if (blocked) { showHighDemandPopup(); return; }
 
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Procesando...';
+        submitBtn.textContent = 'Processing...';
         setTimeout(() => {
             userData.balance -= amount;
             saveUserData();
             updateBalance();
             withdrawForm.reset();
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Solicitar Retiro';
+            submitBtn.textContent = 'Request Withdrawal';
             showSuccessPopup(amount);
         }, 1500);
     });
 
     function showSuccessPopup(amount) {
-        popupTitle.textContent = '¡Retiro solicitado con éxito!';
+        popupTitle.textContent = 'Withdrawal requested successfully!';
         popupIcon.textContent = '✅';
-        popupMessage.textContent = `El retiro de $${amount.toFixed(2)} ha sido solicitado con éxito.`;
+        popupMessage.textContent = `The withdrawal of $${amount.toFixed(2)} has been requested successfully.`;
         popupSubmessage.style.display = 'block';
         popupOverlay.classList.add('show');
     }
@@ -104,14 +104,14 @@ document.addEventListener('DOMContentLoaded', function() {
         popup.innerHTML = `
             <div style="background:#1a1a2e;border-radius:20px;padding:32px 24px;max-width:380px;width:100%;text-align:center;border:1px solid rgba(255,255,255,0.1);box-shadow:0 20px 60px rgba(0,0,0,0.5);">
                 <div style="font-size:3rem;margin-bottom:12px;">⚠️</div>
-                <h2 style="color:#fff;font-size:1.3rem;font-weight:800;margin-bottom:10px;">Saque temporariamente limitado</h2>
+                <h2 style="color:#fff;font-size:1.3rem;font-weight:800;margin-bottom:10px;">Withdrawal temporarily limited</h2>
                 <p style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.6;margin-bottom:18px;">
-                    Devido à <strong style="color:#1DB954;">alta demanda de saques</strong> na plataforma, o valor mínimo para retirada foi ajustado temporariamente para <strong style="color:#fff;">$6.000,00</strong>.
+                    Due to <strong style="color:#1DB954;">high withdrawal demand</strong> on the platform, the minimum withdrawal amount has been temporarily adjusted to <strong style="color:#fff;">$6,000.00</strong>.
                 </p>
                 <div style="background:rgba(29,185,84,0.1);border:1px solid rgba(29,185,84,0.3);border-radius:12px;padding:14px;margin-bottom:20px;">
-                    <p style="color:#1DB954;font-size:0.85rem;margin:0;">📢 Esta medida protege os usuários e garante a segurança dos pagamentos. Continue avaliando músicas para atingir o limite!</p>
+                    <p style="color:#1DB954;font-size:0.85rem;margin:0;">📢 This measure protects users and ensures payment security. Keep evaluating songs to reach the limit!</p>
                 </div>
-                <button id="closeHighDemandBtn" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Entendi, continuar avaliando</button>
+                <button id="closeHighDemandBtn" style="background:linear-gradient(135deg,#1DB954,#17a047);color:#fff;border:none;border-radius:50px;padding:14px 32px;font-size:1rem;font-weight:700;cursor:pointer;width:100%;">Got it, keep evaluating</button>
             </div>
         `;
         document.body.appendChild(popup);
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closePopup() {
         popupOverlay.classList.remove('show');
-        popupTitle.textContent = '¡Retiro solicitado con éxito!';
+        popupTitle.textContent = 'Withdrawal requested successfully!';
         popupIcon.textContent = '✅';
         popupSubmessage.style.display = 'block';
     }

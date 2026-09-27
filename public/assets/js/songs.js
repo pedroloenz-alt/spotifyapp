@@ -1,4 +1,4 @@
-// Lista de músicas para avaliação - adicione seus arquivos em assets/audio/
+// List of songs for evaluation - add your files in assets/audio/
 // Formato: { src, title, artist, cover (opcional) }
 window.localSongs = [
     { src: 'assets/audio/song1.mp3', title: 'good 4 u', artist: 'Olivia Rodrigo' },

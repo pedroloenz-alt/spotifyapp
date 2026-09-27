@@ -1,10 +1,10 @@
-// Configurações
+// Settings
 const DAILY_LIMIT = 15; // Limit per 4-hour window
 const MIN_DAILY_REWARD = 5.10; // Minimum reward
 const MAX_DAILY_REWARD = 6.90; // Maximum reward
 const COOLDOWN_HOURS = 4; // Hours to wait after hitting limit
 
-// Estado da aplicação
+// Application State
 let currentUser = null;
 let userData = null;
 let currentSong = null;
@@ -39,14 +39,14 @@ const videoInfoTimerElement = document.getElementById('videoInfoTimer');
 
 // Motivational messages
 const quickMessages = [
-    '¡Buena elección! 💸',
-    '¡Bien! ¡Sigue así! 🎯',
-    '¡Genial! 🌟',
-    '¡Perfecto! 💎',
-    '¡Excelente! ⭐',
-    '¡Lo estás haciendo muy bien! 🚀',
-    '¡Sigue así! 💪',
-    '¡Increíble! 🎉'
+    'Great choice! 💸',
+    'Nice! Keep it up! 🎯',
+    'Awesome! 🌟',
+    'Perfect! 💎',
+    'Excellent! ⭐',
+    'You\'re doing great! 🚀',
+    'Keep going! 💪',
+    'Amazing! 🎉'
 ];
 
 // ========== USER MANAGEMENT ==========
@@ -170,7 +170,7 @@ function updateBalance() {
 
 function updateProgress() {
     const count = getDailyEvaluationsCount();
-    if (progressText) progressText.textContent = `${count} completadas`;
+    if (progressText) progressText.textContent = `${count} completed`;
     if (songCounter) songCounter.textContent = `Song ${count + 1}`;
 }
 
@@ -338,12 +338,12 @@ function showLimitReachedMessage() {
     popup.innerHTML = `
         <div class="popup info-popup">
             <div class="popup-icon-large">⏳</div>
-            <h2 class="popup-title-info">Límite alcanzado</h2>
-            <p class="popup-message-info">¡Excelente trabajo! Completaste las ${DAILY_LIMIT} evaluaciones de esta sesión.<br><br>Las próximas evaluaciones estarán disponibles en:</p>
+            <h2 class="popup-title-info">Limit reached</h2>
+            <p class="popup-message-info">Great job! You completed the ${DAILY_LIMIT} evaluations of this session.<br><br>The next evaluations will be available in:</p>
             <div style="font-size:2rem;font-weight:800;color:#1DB954;margin:12px 0;letter-spacing:2px;" id="cooldownTimerDisplay">${h}:${m}:${s}</div>
-            <p style="font-size:0.85rem;opacity:0.7;">Vuelve en ${COOLDOWN_HOURS} horas para seguir ganando 💰</p>
+            <p style="font-size:0.85rem;opacity:0.7;">Come back in ${COOLDOWN_HOURS} hours to keep earning 💰</p>
             <div class="popup-buttons">
-                <button class="popup-btn popup-btn-primary" id="closeCooldownPopup">OK, entendido</button>
+                <button class="popup-btn popup-btn-primary" id="closeCooldownPopup">Got it</button>
             </div>
         </div>
     `;
@@ -381,7 +381,7 @@ function showLimitReachedMessage() {
 function showAllSongsEvaluatedMessage() {
     if (likeBtn) likeBtn.disabled = true;
     if (dislikeBtn) dislikeBtn.disabled = true;
-    showInfoPopup('¡Todo listo!', 'Ya evaluaste todas las canciones disponibles. ¿Quieres reiniciar para seguir ganando?', '🎉', true);
+    showInfoPopup('All set!', 'You\'ve evaluated all available songs. Do you want to restart to keep earning?', '🎉', true);
 }
 
 function showInfoPopup(title, message, icon = 'ℹ️', showResetButton = false) {
@@ -394,7 +394,7 @@ function showInfoPopup(title, message, icon = 'ℹ️', showResetButton = false)
             <p class="popup-message-info">${message}</p>
             <div class="popup-stats">
                 <div class="stat-item">
-                    <span class="stat-label">Hoy</span>
+                    <span class="stat-label">Today</span>
                     <span class="stat-value">${getDailyEvaluationsCount()}/${DAILY_LIMIT}</span>
                 </div>
                 <div class="stat-divider"></div>
@@ -404,8 +404,8 @@ function showInfoPopup(title, message, icon = 'ℹ️', showResetButton = false)
                 </div>
             </div>
             <div class="popup-buttons">
-                ${showResetButton ? '<button class="popup-btn popup-btn-primary" id="resetSongsBtn">Reiniciar y continuar</button>' : ''}
-                <button class="popup-btn ${showResetButton ? 'popup-btn-secondary' : 'popup-btn-primary'}" id="closeInfoPopup">${showResetButton ? 'Cancelar' : 'OK'}</button>
+                ${showResetButton ? '<button class="popup-btn popup-btn-primary" id="resetSongsBtn">Restart and continue</button>' : ''}
+                <button class="popup-btn ${showResetButton ? 'popup-btn-secondary' : 'popup-btn-primary'}" id="closeInfoPopup">${showResetButton ? 'Cancel' : 'OK'}</button>
             </div>
         </div>
     `;
@@ -448,7 +448,7 @@ function handleAnswer(isLike) {
 
 function showDailyRewardPopup(amount) {
     popupAmount.textContent = `+$ ${formatCurrency(amount)}`;
-    document.querySelector('.popup-title').textContent = '¡Felicitaciones!';
+    document.querySelector('.popup-title').textContent = 'Congratulations!';
     let popupMessage = document.querySelector('.popup-message');
     if (!popupMessage) {
         popupMessage = document.createElement('p');
@@ -456,7 +456,7 @@ function showDailyRewardPopup(amount) {
         const popup = document.querySelector('.popup');
         popup.insertBefore(popupMessage, document.getElementById('popupAmount').nextSibling);
     }
-    popupMessage.textContent = `¡Completaste las ${DAILY_LIMIT} evaluaciones de hoy!`;
+    popupMessage.textContent = `You completed today's ${DAILY_LIMIT} evaluations!`;
     popupMessage.style.display = 'block';
     popupOverlay.classList.add('show');
     if (rewardAudio) { rewardAudio.currentTime = 0; rewardAudio.play().catch(() => {}); }
@@ -473,7 +473,7 @@ if (popupClose) {
         popupOverlay.classList.remove('show');
         const popupMessage = document.querySelector('.popup-message');
         if (popupMessage) popupMessage.style.display = 'none';
-        document.querySelector('.popup-title').textContent = '¡Ganaste!';
+        document.querySelector('.popup-title').textContent = 'You earned!';
         setTimeout(() => { showLimitReachedMessage(); }, 300);
     });
 }
@@ -484,7 +484,7 @@ if (popupOverlay) {
             popupOverlay.classList.remove('show');
             const popupMessage = document.querySelector('.popup-message');
             if (popupMessage) popupMessage.style.display = 'none';
-            document.querySelector('.popup-title').textContent = '¡Ganaste!';
+            document.querySelector('.popup-title').textContent = 'You earned!';
             setTimeout(() => { showLimitReachedMessage(); }, 300);
         }
     });
@@ -499,7 +499,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!loadUserData()) return;
     if (songLibrary.length === 0) {
-        showInfoPopup('No se encontraron canciones', 'Agrega tus archivos de audio en assets/audio/.', '🎵');
+        showInfoPopup('No songs found', 'Add your audio files in assets/audio/.', '🎵');
         if (likeBtn) likeBtn.disabled = true;
         if (dislikeBtn) dislikeBtn.disabled = true;
         return;

@@ -7,12 +7,12 @@ export const Route = createFileRoute("/")({
       { title: "Spotify Rewards – Evaluate & Earn" },
       {
         name: "description",
-        content: "Avalie músicas e ganhe recompensas com o Spotify Rewards.",
+        content: "Evaluate music and earn rewards with Spotify Rewards.",
       },
       { property: "og:title", content: "Spotify Rewards – Evaluate & Earn" },
       {
         property: "og:description",
-        content: "Avalie músicas e ganhe recompensas com o Spotify Rewards.",
+        content: "Evaluate music and earn rewards with Spotify Rewards.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,9 +29,9 @@ function Index() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background">
       <p className="text-sm text-muted-foreground">
-        Redirecionando para o app…{" "}
+        Redirecting to app…{" "}
         <a href="/app.html" className="text-primary underline">
-          Abrir app
+          Open app
         </a>
       </p>
     </div>

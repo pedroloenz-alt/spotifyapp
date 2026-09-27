@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receipt - Spotify Rewards</title>
-    <!-- Importa a fonte Inter para o design premium e Dancing Script para a assinatura -->
+    <!-- Imports Inter font for premium design and Dancing Script for signature -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -25,7 +25,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }
         .spHead {
-            background: #191414; /* Preto oficial do Spotify */
+            background: #191414; /* Official Spotify black */
             padding: 10px 16px;
             display: flex;
             align-items: center;
@@ -43,7 +43,7 @@
         .spHeadLogo svg {
             width: 18px;
             height: 18px;
-            fill: #1DB954; /* Verde oficial do Spotify */
+            fill: #1DB954; /* Official Spotify green */
         }
         .spHeadSub {
             color: #b3b3b3;
@@ -233,7 +233,7 @@
 <body>
 
 <div class="invoice-container">
-    <!-- Header Fatura -->
+    <!-- Invoice Header -->
     <div class="spHead">
         <div class="spHeadLogo">
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -244,14 +244,14 @@
         <div class="spHeadSub">Ref.: <span id="ref-number">SP-583291</span></div>
     </div>
 
-    <!-- Subheader verde -->
+    <!-- Green Subheader -->
     <div class="spSub">
         <h2 class="spSubTitle">Payment Receipt</h2>
     </div>
 
-    <!-- Corpo -->
+    <!-- Body -->
     <div class="spBody">
-        <!-- Remetente e Destinatário -->
+        <!-- Sender and Recipient -->
         <div class="spFromTo">
             <div>
                 <div class="spFromTitle">From:</div>
@@ -267,7 +267,7 @@
             </div>
         </div>
 
-        <!-- Tabela de Itens -->
+        <!-- Items Table -->
         <table class="spTable">
             <thead>
                 <tr>
@@ -292,16 +292,16 @@
         </div>
     </div>
 
-    <!-- Assinatura Oficial -->
+    <!-- Official Signature -->
     <div class="spSignatureRow">
-        <!-- Metadados da Emissão -->
+        <!-- Issuance Metadata -->
         <div class="spMeta">
             <div><strong>Ref.:</strong> <span id="ref-number-meta">SP-583291</span></div>
             <div><strong>Issued:</strong> <span id="invoice-date">--/--/----</span></div>
             <div class="spMetaNote">Document electronically issued. Valid without physical signature.</div>
         </div>
 
-        <!-- Assinatura em Cursiva -->
+        <!-- Cursive Signature -->
         <div class="spSignArea">
             <div class="spSignVal">Christian Luiga</div>
             <div class="spSignLine">
@@ -311,7 +311,7 @@
         </div>
     </div>
 
-    <!-- Método de Pagamento e Aviso de Cartão -->
+    <!-- Payment Method and Card Notice -->
     <div class="spPaymentInfo">
         <div class="spPayMethod">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
@@ -323,7 +323,7 @@
         </div>
     </div>
 
-    <!-- Ondas e Logo compactos -->
+    <!-- Compact Wave and Logo -->
     <div class="spWaveFooter">
         <svg class="spWaveSvg" viewBox="0 0 400 20" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0,10 Q200,20 400,10 L400,0 L0,0 Z" fill="white"/>
@@ -337,14 +337,14 @@
 </div>
 
 <script>
-    // Recupera os parâmetros da URL
+    // Retrieve URL parameters
     var params = new URLSearchParams(window.location.search);
     
-    // Nome e E-mail
+    // Name and Email
     document.getElementById('to-name').textContent = params.get('nome') || 'Music Evaluator';
     document.getElementById('to-email').textContent = params.get('email') || '';
     
-    // Saldo (padrão: 438,77)
+    // Balance (default: 438.77)
     var saldo = params.get('saldo') || '438.77';
     if (!saldo.includes('$') && !saldo.includes('R$')) {
         saldo = '$' + saldo;
@@ -352,12 +352,12 @@
     document.getElementById('item-total').textContent = saldo;
     document.getElementById('invoice-total').textContent = saldo;
     
-    // Gera uma referência aleatória para o recibo
+    // Generate random receipt reference
     var ref = 'SP-' + Math.floor(100000 + Math.random() * 900000);
     document.getElementById('ref-number').textContent = ref;
     document.getElementById('ref-number-meta').textContent = ref;
     
-    // Data de emissão automática (hoje)
+    // Automatic issuance date (today)
     var today = new Date();
     var dateStr = today.toLocaleDateString('en-US', { day:'2-digit', month:'2-digit', year:'numeric' });
     document.getElementById('invoice-date').textContent = dateStr;
